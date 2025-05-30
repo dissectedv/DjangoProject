@@ -11,3 +11,12 @@
     <button type="submit">Yes</button>
     <a href="{% url 'autor_list' %}">Cancel</a>
 </form>
+
+<h1>Confirm Delete Publisher</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <p>Delete '{{ publisher }}'?</p>
+  <button type="submit">Yes</button>
+  <a href="{% url 'publisher_list' %}">Cancel</a>
+</form>

@@ -13,3 +13,15 @@
     </li>{% endfor %}
 </ul>
     <a href="{% url 'autor_create' %}">New Item</a>
+    
+<h1>Publishers</h1>
+<ul>
+    {% for publisher in publishers %}
+        <li>
+            {{ publisher.livro }} -
+            <a href="{% url 'publisher_update' publisher.pk %}">Edit</a> -
+            <a href="{% url 'publisher_delete' publisher.pk %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'publisher_create' %}">New Publisher</a>

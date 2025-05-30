@@ -10,4 +10,8 @@ urlpatterns = [
     path('new/', views.autor_create, name='autor_create'),
     path('edit/<int:pk>/', views.autor_update, name='autor_update'),
     path('delete/<int:pk>/', views.autor_delete, name='autor_delete'),
+    path('publishers/', views.publisher_list, name='publisher_list'),
+    path('publishers/new/', views.publisher_create, name='publisher_create'),
+    path('publishers/edit/<int:pk>/', views.publisher_update, name='publisher_update'),
+    path('publishers/delete/<int:pk>/', views.publisher_delete, name='publisher_delete'),
 ]
